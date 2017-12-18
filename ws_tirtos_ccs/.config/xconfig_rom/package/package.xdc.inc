@@ -1,0 +1,12 @@
+package.xdc
+package.xs
+package/xconfig_rom.sch
+package/.vers_g200
+package/.vers_r200
+package/.vers_b200
+package/.xdc-D20
+package/xconfig_rom.java
+package/xconfig_rom.class
+package/package_xconfig_rom.c
+package/package.defs.h
+package/xconfig_rom.ccs

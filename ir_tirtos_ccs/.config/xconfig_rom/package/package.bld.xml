@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="GBK"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="xconfig_rom" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/rom_pem3.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="C:/ti/workspace_v7/beacon_rfdriver_cc2640r2rsm/TOOLS/rom.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/rom_pem3.mak" src="package.bld"/>
+        <srcFile name="package/cfg/rom_pem3.oem3.dep" src="package/cfg/rom_pem3.c"/>
+        <srcFile name="package/cfg/rom_pem3.dep" src="package/cfg/rom_pem3.cfg"/>
+        <srcFile name="package/cfg/rom.xem3.mak" src="package.bld"/>
+        <srcFile name="package/rel/xconfig_rom.tar.dep" src="package/rel/xconfig_rom.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.arm.elf.M3"
+            version="ti.targets.arm.elf.M3{1,0,16.9,6"
+            rawVersion="16.9.6"
+            platform="ti.platforms.simCM3"
+            isa="v7M"
+            suffix="em3"
+            rootDir="I:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS"
+            os="undefined"
+            rts="ti.targets.arm.rtsarm">
+            <model endian="little"
+                codeModel="thumb2"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="rom"
+        pname="rom.pem3"
+        target="ti.targets.arm.elf.M3"
+        platform="ti.platforms.simplelink:CC2640R2F"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/rom_pem3.cfg"
+        xCfgPrefix="package/cfg/rom_pem3"
+        cfgScript="C:/ti/workspace_v7/beacon_rfdriver_cc2640r2rsm/TOOLS/rom.cfg"
+        cfgArgs="null"
+        />
+    </configurations>
+    <executables>
+    <executable name="rom"
+        pname="rom.xem3"
+        target="ti.targets.arm.elf.M3"
+        platform="ti.platforms.simplelink:CC2640R2F"
+        profile="release"
+        xCfgScript="package/cfg/rom_pem3.cfg"
+        xCfgPrefix="package/cfg/rom_pem3"
+        cfgScript="C:/ti/workspace_v7/beacon_rfdriver_cc2640r2rsm/TOOLS/rom.cfg"
+        cfgArgs="null"
+        />
+    </executables>
+    <tests>
+    <test exeName="rom.xem3"
+        args=""
+        groupName="rom.xem3"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="xconfig_rom"
+        pname="xconfig_rom.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>
